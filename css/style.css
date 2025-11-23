@@ -1,0 +1,154 @@
+/* ==========================================================================
+   BINETTE ET FILLES - Styles personnalisés (complément à Bootstrap)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   IMPORTS - Google Fonts
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* --------------------------------------------------------------------------
+   VARIABLES CSS - Guide de styles
+   -------------------------------------------------------------------------- */
+:root {
+    --vert-sauge: #9CAF88;
+    --rose-pale: #FFC0CB;
+    --terre-cuite: #D4A59A;
+    --creme: #FAF7F0;
+    --noir-doux: #2C2C2C;
+    --gris: #6B6B6B;
+    --gris-clair: #DDDDDD;
+}
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHIES
+   -------------------------------------------------------------------------- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--noir-doux);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--noir-doux);
+}
+
+/* --------------------------------------------------------------------------
+   COULEURS PERSONNALISÉES
+   -------------------------------------------------------------------------- */
+.bg-creme {
+    background-color: var(--creme);
+}
+
+.bg-vert-sauge {
+    background-color: var(--vert-sauge);
+}
+
+.bg-rose-pale {
+    background-color: var(--rose-pale);
+}
+
+.text-vert-sauge {
+    color: var(--vert-sauge);
+}
+
+.text-gris {
+    color: var(--gris);
+}
+
+.text-noir-doux {
+    color: var(--noir-doux);
+}
+
+/* --------------------------------------------------------------------------
+   HEADER
+   -------------------------------------------------------------------------- */
+.navbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--noir-doux);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--vert-sauge) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   BOUTONS PERSONNALISÉS
+   -------------------------------------------------------------------------- */
+.btn-vert-sauge {
+    background-color: var(--vert-sauge);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    padding: 12px 32px;
+    transition: all 0.3s ease;
+}
+
+.btn-vert-sauge:hover {
+    background-color: var(--terre-cuite);
+    color: white;
+}
+
+.btn-outline-vert-sauge {
+    background-color: transparent;
+    color: var(--vert-sauge);
+    border: 2px solid var(--vert-sauge);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 32px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-vert-sauge:hover {
+    background-color: var(--vert-sauge);
+    color: white;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
+.footer-link {
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--vert-sauge) !important;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--gris-clair);
+    color: var(--noir-doux);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    background-color: var(--vert-sauge);
+    color: white;
+}
+
+/* --------------------------------------------------------------------------
+   FORMULAIRES
+   -------------------------------------------------------------------------- */
+.form-control:focus {
+    border-color: var(--vert-sauge);
+    box-shadow: 0 0 0 0.2rem rgba(156, 175, 136, 0.25);
+}
+
