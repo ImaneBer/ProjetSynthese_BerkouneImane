@@ -13,6 +13,7 @@
 :root {
     --vert-sauge: #9CAF88;
     --rose-pale: #FFC0CB;
+    --rose-tres-pale: #FFF5F7;
     --terre-cuite: #D4A59A;
     --creme: #FAF7F0;
     --noir-doux: #2C2C2C;
@@ -33,6 +34,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--noir-doux);
 }
 
+h2 {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--rose-pale);
+    margin: 20px auto 0;
+}
+
 /* --------------------------------------------------------------------------
    COULEURS PERSONNALISÉES
    -------------------------------------------------------------------------- */
@@ -48,6 +63,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--rose-pale);
 }
 
+.bg-rose-tres-pale {
+    background-color: var(--rose-tres-pale);
+}
+
 .text-vert-sauge {
     color: var(--vert-sauge);
 }
@@ -61,8 +80,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
+   SECTIONS
+   -------------------------------------------------------------------------- */
+section {
+    padding: 100px 0;
+}
+
+/* --------------------------------------------------------------------------
    HEADER
    -------------------------------------------------------------------------- */
+.navbar {
+    border-bottom: 1px solid var(--gris-clair);
+}
+
 .navbar-brand {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
@@ -99,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     height: auto;
     object-fit: cover;
-    filter: brightness(1.2);
+    filter: brightness(1.05);
 }
 
 .hero-overlay {
@@ -146,95 +176,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   BOUTONS PERSONNALISÉS
-   -------------------------------------------------------------------------- */
-.btn-vert-sauge {
-    background-color: var(--vert-sauge);
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    padding: 12px 32px;
-    transition: all 0.3s ease;
-}
-
-.btn-vert-sauge:hover {
-    background-color: var(--terre-cuite);
-    color: white;
-}
-
-.btn-outline-vert-sauge {
-    background-color: transparent;
-    color: var(--vert-sauge);
-    border: 2px solid var(--vert-sauge);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 12px 32px;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-vert-sauge:hover {
-    background-color: var(--vert-sauge);
-    color: white;
-}
-
-/* --------------------------------------------------------------------------
-   FOOTER
-   -------------------------------------------------------------------------- */
-.footer-link {
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: var(--vert-sauge) !important;
-}
-
-.social-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: var(--gris-clair);
-    color: var(--noir-doux);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    font-size: 1.2rem;
-}
-
-.social-icon:hover {
-    background-color: var(--vert-sauge);
-    color: white;
-}
-
-/* --------------------------------------------------------------------------
-   FORMULAIRES
-   -------------------------------------------------------------------------- */
-.form-control:focus {
-    border-color: var(--vert-sauge);
-    box-shadow: 0 0 0 0.2rem rgba(156, 175, 136, 0.25);
-}
-
-/* --------------------------------------------------------------------------
    NOS CRÉATIONS
    -------------------------------------------------------------------------- */
 .creations {
-    background-color: white;
+    background-color: var(--rose-tres-pale);
 }
 
 .creation-card {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     height: 300px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .creation-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4);
+    border: 2px solid var(--rose-pale);
 }
 
 .creation-img {
@@ -245,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .creation-card:hover .creation-img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .creation-content {
@@ -254,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
     color: white;
 }
 
@@ -272,15 +233,202 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .creation-link:hover {
-    color: var(--vert-sauge);
+    color: var(--rose-pale);
 }
 
-@media (max-width: 500px) {
-    .creation-card {
-        height: 250px;
-    }
-    
-    .creation-content h3 {
-        font-size: 1.5rem;
-    }
+/* --------------------------------------------------------------------------
+   PROMOTIONS - CARROUSEL
+   -------------------------------------------------------------------------- */
+.promotions {
+    background-color: white;
+}
+
+.carousel-inner {
+    padding: 30px 0;
+}
+
+.promo-img {
+    border-radius: 12px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.promo-content {
+    padding: 40px;
+    background-color: var(--rose-tres-pale);
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promo-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--noir-doux);
+}
+
+.promo-text {
+    font-size: 1.1rem;
+    color: var(--gris);
+    margin-bottom: 20px;
+}
+
+/* Indicateurs personnalisés */
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--gris-clair);
+}
+
+.carousel-indicators .active {
+    background-color: var(--rose-pale);
+}
+
+/* Flèches personnalisées */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--vert-sauge);
+    border-radius: 50%;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--rose-pale);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION VALEURS
+   -------------------------------------------------------------------------- */
+.valeurs {
+    background-color: var(--creme);
+}
+
+.valeur-card {
+    text-align: center;
+    padding: 40px 20px;
+    transition: transform 0.3s ease;
+}
+
+.valeur-card:hover {
+    transform: translateY(-5px);
+}
+
+.valeur-icon {
+    font-size: 3.5rem;
+    color: var(--rose-pale);
+    margin-bottom: 25px;
+    display: block;
+}
+
+.valeur-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--noir-doux);
+}
+
+.valeur-card p {
+    color: var(--gris);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   BOUTONS PERSONNALISÉS
+   -------------------------------------------------------------------------- */
+.btn-vert-sauge {
+    background-color: var(--vert-sauge);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    padding: 14px 36px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(156, 175, 136, 0.3);
+}
+
+.btn-vert-sauge:hover {
+    background-color: var(--terre-cuite);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 165, 154, 0.4);
+}
+
+.btn-outline-vert-sauge {
+    background-color: transparent;
+    color: var(--vert-sauge);
+    border: 2px solid var(--vert-sauge);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 36px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn-outline-vert-sauge:hover {
+    background-color: var(--vert-sauge);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
+footer {
+    background-color: var(--creme);
+    border-top: 2px solid var(--rose-pale);
+}
+
+footer .bi-flower1 {
+    color: var(--rose-pale);
+    font-size: 3rem;
+}
+
+footer h5 {
+    color: var(--noir-doux);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+}
+
+.footer-link {
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--rose-pale) !important;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--rose-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+    border: 2px solid var(--rose-pale);
+}
+
+.social-icon:hover {
+    background-color: var(--vert-sauge);
+    color: white;
+    border-color: var(--vert-sauge);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(156, 175, 136, 0.3);
+}
+
+footer .border-top {
+    border-color: var(--rose-pale) !important;
+    border-width: 1px !important;
 }
