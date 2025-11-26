@@ -274,7 +274,8 @@ section {
     font-size: 1.1rem;
     color: var(--gris);
     margin-bottom: 20px;
-}
+} 
+
 
 /* Indicateurs personnalisés */
 .carousel-indicators [data-bs-target] {
@@ -306,7 +307,7 @@ section {
    SECTION VALEURS
    -------------------------------------------------------------------------- */
 .valeurs {
-    background-color: var(--creme);
+    background-color: var(--rose-tres-pale);
 }
 
 .valeur-card {
@@ -320,10 +321,24 @@ section {
 }
 
 .valeur-icon {
-    font-size: 3.5rem;
-    color: var(--rose-pale);
+    font-size: 2.5rem;
+    color: var(--vert-sauge);
     margin-bottom: 25px;
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.valeur-card:hover .valeur-icon {
+    background-color: var(--vert-sauge);
+    color: white;
+    transform: scale(1.1);
 }
 
 .valeur-card h3 {
@@ -383,7 +398,7 @@ section {
    FOOTER
    -------------------------------------------------------------------------- */
 footer {
-    background-color: var(--creme);
+    background-color: var(--creme) !important;
     border-top: 2px solid var(--rose-pale);
 }
 
@@ -432,3 +447,12 @@ footer .border-top {
     border-color: var(--rose-pale) !important;
     border-width: 1px !important;
 }
+
+/* --------------------------------------------------------------------------
+   FORMULAIRES
+   -------------------------------------------------------------------------- */
+.form-control:focus {
+    border-color: var(--vert-sauge);
+    box-shadow: 0 0 0 0.2rem rgba(156, 175, 136, 0.25);
+}
+
