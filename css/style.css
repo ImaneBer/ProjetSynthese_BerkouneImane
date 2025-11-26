@@ -1,6 +1,4 @@
-/* ==========================================================================
-   BINETTE ET FILLES - Styles personnalisés (complément à Bootstrap)
-   ========================================================================== */
+
 
 /* --------------------------------------------------------------------------
    IMPORTS - Google Fonts
@@ -413,6 +411,13 @@ footer h5 {
     font-size: 1.3rem;
 }
 
+.footer-logo {
+    height: 80px;
+    width: auto;
+}
+
+
+
 .footer-link {
     transition: color 0.3s ease;
 }
@@ -448,11 +453,5 @@ footer .border-top {
     border-width: 1px !important;
 }
 
-/* --------------------------------------------------------------------------
-   FORMULAIRES
-   -------------------------------------------------------------------------- */
-.form-control:focus {
-    border-color: var(--vert-sauge);
-    box-shadow: 0 0 0 0.2rem rgba(156, 175, 136, 0.25);
-}
+
 
