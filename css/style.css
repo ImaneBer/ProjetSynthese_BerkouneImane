@@ -1,24 +1,23 @@
 
-
 /* --------------------------------------------------------------------------
    IMPORTS - Google Fonts
    -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* --------------------------------------------------------------------------
-   VARIABLES CSS - Guide de styles
+   VARIABLES CSS - Guide de styles (CONTRASTES OPTIMISÉS WAVE)
    -------------------------------------------------------------------------- */
+
 :root {
-    --vert-sauge: #9CAF88;
+    --vert-sauge: #6B8A55;
     --rose-pale: #FFC0CB;
     --rose-tres-pale: #FFF5F7;
-    --terre-cuite: #D4A59A;
+    --terre-cuite: #C08A75;
     --creme: #FAF7F0;
     --noir-doux: #2C2C2C;
-    --gris: #6B6B6B;
+    --gris: #5A5A5A;
     --gris-clair: #DDDDDD;
 }
-
 /* --------------------------------------------------------------------------
    TYPOGRAPHIES
    -------------------------------------------------------------------------- */
@@ -104,7 +103,7 @@ section {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--vert-sauge) !important;
+    color: #5A7A45 !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -136,7 +135,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 .hero-content {
@@ -155,14 +154,14 @@ section {
     color: white;
     margin-bottom: 30px;
     display: block;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 5px 25px rgba(0,0,0,1);
 }
 
 .hero-title {
     color: white;
     font-size: 3.5rem;
     margin-bottom: 25px;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 5px 35px rgba(0,0,0,1);
     line-height: 1.3;
 }
 
@@ -170,7 +169,7 @@ section {
     color: white;
     font-size: 1.3rem;
     margin-bottom: 35px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 25px rgba(0,0,0,1);
 }
 
 /* --------------------------------------------------------------------------
@@ -213,7 +212,7 @@ section {
     left: 0;
     right: 0;
     padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
     color: white;
 }
 
@@ -221,6 +220,7 @@ section {
     font-size: 1.8rem;
     color: white;
     margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .creation-link {
@@ -228,6 +228,7 @@ section {
     text-decoration: underline;
     font-size: 0.9rem;
     transition: color 0.3s ease;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.8);
 }
 
 .creation-link:hover {
@@ -272,8 +273,13 @@ section {
     font-size: 1.1rem;
     color: var(--gris);
     margin-bottom: 20px;
-} 
+}
 
+/* Bouton plus petit dans carrousel */
+.promo-content .btn {
+    padding: 10px 28px;
+    font-size: 0.9rem;
+}
 
 /* Indicateurs personnalisés */
 .carousel-indicators [data-bs-target] {
@@ -364,14 +370,14 @@ section {
     padding: 14px 36px;
     transition: all 0.3s ease;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(156, 175, 136, 0.3);
+    box-shadow: 0 4px 15px rgba(122, 154, 101, 0.3);
 }
 
 .btn-vert-sauge:hover {
     background-color: var(--terre-cuite);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 165, 154, 0.4);
+    box-shadow: 0 6px 20px rgba(192, 138, 117, 0.4);
 }
 
 .btn-outline-vert-sauge {
@@ -401,7 +407,7 @@ footer {
 }
 
 footer .bi-flower1 {
-    color: var(--rose-pale);
+    color: var(--vert-sauge); /* ← VERT SAUGE au lieu de rose */
     font-size: 3rem;
 }
 
@@ -416,14 +422,18 @@ footer h5 {
     width: auto;
 }
 
-
+footer address,
+footer .text-gris {
+    color: var(--noir-doux) !important;
+}
 
 .footer-link {
     transition: color 0.3s ease;
+    color: var(--noir-doux);
 }
 
 .footer-link:hover {
-    color: var(--rose-pale) !important;
+    color: var(--vert-sauge) !important; /* ← VERT SAUGE au hover */
 }
 
 .social-icon {
@@ -431,27 +441,24 @@ footer h5 {
     height: 48px;
     border-radius: 50%;
     background-color: white;
-    color: var(--rose-pale);
+    color: var(--vert-sauge); /* ← VERT SAUGE au lieu de rose */
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     font-size: 1.3rem;
-    border: 2px solid var(--rose-pale);
+    border: 2px solid var(--vert-sauge); /* ← Bordure VERTE */
 }
 
 .social-icon:hover {
-    background-color: var(--vert-sauge);
+    background-color: var(--vert-sauge); /* ← Fond VERT au hover */
     color: white;
     border-color: var(--vert-sauge);
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(156, 175, 136, 0.3);
+    box-shadow: 0 4px 12px rgba(122, 154, 101, 0.3);
 }
 
 footer .border-top {
     border-color: var(--rose-pale) !important;
     border-width: 1px !important;
 }
-
-
-
