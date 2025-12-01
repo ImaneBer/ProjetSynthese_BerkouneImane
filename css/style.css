@@ -461,4 +461,52 @@ footer .text-gris {
 footer .border-top {
     border-color: var(--rose-pale) !important;
     border-width: 1px !important;
+} 
+
+/* --------------------------------------------------------------------------
+   PAGE NOS BOUQUETS
+   -------------------------------------------------------------------------- */
+
+/* Hero Bouquets avec dégradé rose */
+.hero-bouquets {
+    background: linear-gradient(135deg, var(--rose-tres-pale) 0%, var(--rose-pale) 100%);
+    /* Même dégradé que la promo */
+    padding: 80px 0;
+    border-bottom: 3px solid var(--rose-pale);
+    /* Bordure en bas pour séparer */
+    box-shadow: 0 4px 20px rgba(255, 192, 203, 0.3);
+    /* Ombre douce */
 }
+
+.hero-icon-bouquets {
+    font-size: 4rem;
+    color: var(--vert-sauge);
+    display: block;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 4px 10px rgba(122, 154, 101, 0.3));
+    animation: rotate 4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+.hero-title-bouquets {
+    font-size: 3rem;
+    color: var(--noir-doux);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle-bouquets {
+    font-size: 1.2rem;
+    color: var(--noir-doux); /* Noir au lieu de gris pour meilleure lisibilité */
+    font-weight: 500;
+}
+
