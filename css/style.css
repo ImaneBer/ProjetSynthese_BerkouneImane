@@ -555,3 +555,97 @@ footer .border-top {
     margin-bottom: 15px;
 }
 
+/* Section Promotion Intercalée - ULTRA VISIBLE */
+.promo-section {
+    background-color: white;
+    padding: 80px 0; /* Plus d'espace autour */
+}
+
+.promo-banner {
+    background: linear-gradient(135deg, var(--rose-tres-pale) 0%, var(--rose-pale) 100%);
+    /* Dégradé rose pour attirer l'œil */
+    border-radius: 16px;
+    padding: 50px 40px;
+    box-shadow: 0 8px 30px rgba(255, 192, 203, 0.4);
+    /* Grosse ombre rose */
+    border: 3px solid var(--rose-pale);
+    /* Bordure rose visible */
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s ease-in-out infinite;
+    /* Animation pulsation */
+}
+
+/* Animation pulsation douce */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 30px rgba(255, 192, 203, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(255, 192, 203, 0.6);
+    }
+}
+
+.promo-banner-title {
+    font-size: 3rem; /* Plus gros */
+    color: var(--noir-doux);
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.promo-banner-text {
+    font-size: 1.4rem; /* Plus gros */
+    color: var(--noir-doux); /* Noir au lieu de gris pour meilleure lisibilité */
+    font-weight: 500;
+}
+
+.promo-banner-text strong {
+    color: var(--vert-sauge);
+    font-size: 1.6rem;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-left: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.promo-icon {
+    font-size: 6rem; /* Encore plus gros */
+    color: var(--vert-sauge);
+    filter: drop-shadow(0 4px 10px rgba(122, 154, 101, 0.3));
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Animation rebond icône */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Badge "PROMO" optionnel */
+.promo-banner::before {
+    content: '🎁 PROMO';
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    background-color: var(--vert-sauge);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(122, 154, 101, 0.4);
+}
+
+
+
