@@ -510,3 +510,48 @@ footer .border-top {
     font-weight: 500;
 }
 
+/* Cartes Bouquets */
+.bouquet-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bouquet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4);
+}
+.bouquet-img {
+    height: 550px;
+    object-fit: cover;
+    padding: 15px; /* Espace autour de l'image */
+    background-color: white;
+}
+
+.bouquet-info {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1; /* ← Prend l'espace restant */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bouquet-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--noir-doux);
+}
+
+.bouquet-price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--vert-sauge);
+    margin-bottom: 15px;
+}
+
