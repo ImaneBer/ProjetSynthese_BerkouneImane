@@ -879,3 +879,169 @@ footer .border-top {
     font-size: 1.1rem;
 }
 
+/* --------------------------------------------------------------------------
+   PAGE MARIAGES
+   -------------------------------------------------------------------------- */
+
+/* Fil d'Ariane Mariages */
+.breadcrumb-mariage {
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gris-clair);
+}
+
+.breadcrumb-mariage .breadcrumb {
+    background: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.breadcrumb-mariage .breadcrumb-item {
+    font-size: 0.95rem;
+}
+
+.breadcrumb-mariage .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: var(--gris);
+    padding: 0 10px;
+}
+
+.breadcrumb-mariage .breadcrumb-item a {
+    color: var(--vert-sauge);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-mariage .breadcrumb-item a:hover {
+    color: var(--rose-pale);
+}
+
+.breadcrumb-mariage .breadcrumb-item.active {
+    color: var(--gris);
+}
+
+/* --------------------------------------------------------------------------
+   HERO MARIAGES - AVEC ANIMATION MOT PAR MOT
+   -------------------------------------------------------------------------- */
+
+.hero-mariages {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-mariage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
+
+.hero-mariage-content {
+    position: absolute;
+    top: 50%;
+    left: 68%; /* ← CHANGÉ : de 50% à 60% pour décaler à droite */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Animation titre mot par mot - Haut vers bas */
+.hero-mariage-title {
+    font-size: 4.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.9);
+    font-weight: 400;
+    letter-spacing: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-mariage-title .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDownHero 0.8s ease-out forwards;
+}
+
+/* Délai pour chaque mot */
+.hero-mariage-title .word-1 {
+    animation-delay: 0.3s;
+}
+
+.hero-mariage-title .word-2 {
+    animation-delay: 0.6s;
+}
+
+.hero-mariage-title .word-3 {
+    animation-delay: 0.9s;
+}
+
+/* Animation de descente pour le hero */
+@keyframes slideDownHero {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bouton Hero - Vert Sauge avec animation */
+.hero-mariage-content .btn {
+    background-color: var(--vert-sauge);
+    color: white;
+    border: 2px solid var(--vert-sauge);
+    font-weight: 600;
+    padding: 15px 45px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(122, 154, 101, 0.4);
+    opacity: 0;
+    animation: fadeInButton 0.6s ease-out 1.2s forwards;
+     margin-left: -130px;
+}
+
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-mariage-content .btn:hover {
+    background-color: var(--terre-cuite);
+    color: white;
+    border-color: var(--terre-cuite);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(192, 138, 117, 0.5);
+}
+
