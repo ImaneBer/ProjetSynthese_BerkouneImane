@@ -1023,7 +1023,7 @@ footer .border-top {
     box-shadow: 0 4px 15px rgba(122, 154, 101, 0.4);
     opacity: 0;
     animation: fadeInButton 0.6s ease-out 1.2s forwards;
-     margin-left: -130px;
+     margin-left: -150px;
 }
 
 @keyframes fadeInButton {
@@ -1043,5 +1043,159 @@ footer .border-top {
     border-color: var(--terre-cuite);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(192, 138, 117, 0.5);
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .hero-mariages {
+        height: 450px;
+    }
+    
+    .hero-mariage-title {
+        font-size: 3rem;
+        letter-spacing: 3px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-mariage-content .btn {
+        padding: 12px 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-mariages {
+        height: 400px;
+    }
+    
+    .hero-mariage-title {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-mariage-content .btn {
+        padding: 10px 30px;
+        font-size: 0.95rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   GALERIE MARIAGES ÉLÉGANTS - SANS ANIMATIONS D'APPARITION
+   -------------------------------------------------------------------------- */
+
+.galerie-mariages {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Titre simple sans animation */
+.galerie-mariages h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--noir-doux);
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.galerie-mariages h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--rose-pale);
+}
+
+/* Grille Masonry */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Images SANS animations d'apparition - Juste hover */
+.masonry-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Effet  hover */
+.masonry-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 192, 203, 0.5);
+    z-index: 10;
+}
+
+/* Overlay coloré au hover */
+.masonry-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(122, 154, 101, 0.3), rgba(255, 192, 203, 0.3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.masonry-item:hover::before {
+    opacity: 1;
+}
+
+.masonry-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 0;
+}
+
+.masonry-item:hover .masonry-img {
+    transform: scale(1.15);
+}
+
+/* Disposition  */
+.masonry-grid .masonry-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+.masonry-grid .masonry-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.masonry-grid .masonry-item:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1 / span 1;
+}
+
+.masonry-grid .masonry-item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4 / span 1;
+}
+
+.masonry-grid .masonry-item:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+}
+
+.masonry-grid .masonry-item:nth-child(6) {
+    grid-column: 3;
+    grid-row: 2 / span 3;
 }
 
