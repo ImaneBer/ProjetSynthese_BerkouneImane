@@ -19,7 +19,7 @@
 
     <!-- ========== HEADER ========== -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -53,78 +53,78 @@
     </header>
 
     <!-- ========== FIL D'ARIANE ========== -->
-    <nav aria-label="breadcrumb" class="breadcrumb-mariage">
+    <nav aria-label="breadcrumb" class="bg-white border-bottom py-3">
         <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Mariage</li>
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none breadcrumb-link">Accueil</a></li>
+                <li class="breadcrumb-item active text-secondary" aria-current="page">Mariage</li>
             </ol>
         </div>
     </nav>
 
     <!-- ========== HERO MARIAGES ========== -->
-    <section class="hero-mariages">
-        <div class="hero-overlay"></div>
-        <img src="images/bouquet mariage 7.jpg" alt="Mariages Élégants" class="hero-mariage-img">
-        <div class="hero-mariage-content">
-            <h1 class="hero-mariage-title">
+    <section class="hero-mariages position-relative overflow-hidden">
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <img src="images/bouquet mariage 7.jpg" alt="Mariages Élégants" class="hero-mariage-img position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+        <div class="hero-mariage-content position-absolute top-50 start-50 translate-middle text-center w-100">
+            <h1 class="hero-mariage-title d-flex flex-wrap justify-content-center gap-3 text-white mb-4">
                 <span class="word word-1">Élégant</span>
                 <span class="word word-2">Unique</span>
                 <span class="word word-3">Inoubliable</span>
             </h1>
-            <a href="#forfaits" class="btn btn-lg mt-4">Voir détails</a>
+            <a href="#forfaits" class="btn btn-hero btn-lg mt-4 px-5 py-3 rounded-pill shadow">Voir détails</a>
         </div>
     </section>
 
     <!-- ========== GALERIE MARIAGES ÉLÉGANTS ========== -->
-    <section class="galerie-mariages py-5 bg-white">
+    <section class="py-5 bg-white">
         <div class="container">
-            <h2 class="text-center mb-5">Mariages Élégants</h2>
+            <h2 class="text-center mb-5 section-title position-relative pb-4">Mariages Élégants</h2>
             
             <div class="masonry-grid">
                 <!-- Image 1 - Grande (gauche) -->
-                <div class="masonry-item masonry-tall">
-                    <img src="images/bouquet mariage 3.jpg" alt="Décoration mariage 1" class="masonry-img">
+                <div class="masonry-item rounded-3 shadow-sm overflow-hidden position-relative">
+                    <img src="images/bouquet mariage 3.jpg" alt="Décoration mariage 1" class="w-100 h-100 object-fit-cover">
                 </div>
                 
                 <!-- Image 2 - Moyenne (centre) -->
-                <div class="masonry-item masonry-medium">
-                    <img src="images/bouquet mariage.jpg" alt="Décoration mariage 2" class="masonry-img">
+                <div class="masonry-item rounded-3 shadow-sm overflow-hidden position-relative">
+                    <img src="images/bouquet mariage.jpg" alt="Décoration mariage 2" class="w-100 h-100 object-fit-cover">
                 </div>
                 
                 <!-- Image 3 - Petite (droite haut) -->
-                <div class="masonry-item masonry-small">
-                    <img src="images/bouquet mariage 4.jpg" alt="Décoration mariage 3" class="masonry-img">
+                <div class="masonry-item rounded-3 shadow-sm overflow-hidden position-relative">
+                    <img src="images/bouquet mariage 4.jpg" alt="Décoration mariage 3" class="w-100 h-100 object-fit-cover">
                 </div>
                 
                 <!-- Image 4 - Petite (gauche bas) -->
-                <div class="masonry-item masonry-small">
-                    <img src="images/bouquet 26.jpg" alt="Décoration mariage 4" class="masonry-img">
+                <div class="masonry-item rounded-3 shadow-sm overflow-hidden position-relative">
+                    <img src="images/bouquet 26.jpg" alt="Décoration mariage 4" class="w-100 h-100 object-fit-cover">
                 </div>
                 
                 <!-- Image 5 - Moyenne (centre bas) -->
-                <div class="masonry-item masonry-medium">
-                    <img src="images/bouquet mariage 6.jpg" alt="Décoration mariage 5" class="masonry-img">
+                <div class="masonry-item rounded-3 shadow-sm overflow-hidden position-relative">
+                    <img src="images/bouquet mariage 6.jpg" alt="Décoration mariage 5" class="w-100 h-100 object-fit-cover">
                 </div>
                 
                 <!-- Image 6 - Grande (droite bas) -->
-                <div class="masonry-item masonry-tall">
-                    <img src="images/bouquet mariage 5.jpg" alt="Décoration mariage 6" class="masonry-img">
+                <div class="masonry-item rounded-3 shadow-sm overflow-hidden position-relative">
+                    <img src="images/bouquet mariage 5.jpg" alt="Décoration mariage 6" class="w-100 h-100 object-fit-cover">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ========== SÉPARATEUR DÉCORATIF ========== -->
-    <div class="decorative-separator">
-        <span class="sep-line"></span>
+    <div class="container my-5">
+        <hr class="border-0 sep-line opacity-100 mx-auto">
     </div>
 
-   <!-- ========== TEXTE INTRODUCTIF ========== -->
-    <section class="intro-mariages py-5 bg-white">
+    <!-- ========== TEXTE INTRODUCTIF ========== -->
+    <section class="py-5 bg-white">
         <div class="container">
-            <div class="intro-text mx-auto">
-                <p class="lead">
+            <div class="col-xl-10 mx-auto intro-text-box border-start border-end border-4 px-4 px-md-5 py-4">
+                <p class="lead text-secondary lh-lg mb-0 text-justify">
                     Nous avons créé trois forfaits mariage pensés pour répondre à tous vos besoins floraux. 
                     Chaque forfait inclut des éléments essentiels tels que le bouquet de la mariée, les boutonnières, 
                     les centres de table et la décoration de cérémonie. Les bouquets pour les témoins sont inclus selon 
@@ -138,18 +138,77 @@
         </div>
     </section>
 
+    <!-- ========== TÉMOIGNAGES ========== -->
+    <section class="py-5 bg-testimonials">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title position-relative pb-4">Ils nous ont fait confiance</h2>
+            
+            <div class="row g-4">
+                
+                <!-- Témoignage 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card testimonial-card border-0 rounded-4 shadow-sm h-100 p-4 position-relative">
+                        <div class="card-body d-flex flex-column align-items-center text-center p-0">
+                            <img src="images/Clients1.jpg" alt="Marie & Jean" class="testimonial-photo rounded-circle border border-4 mb-3 shadow-sm">
+                            <div class="text-warning mb-3 fs-5">★★★★★</div>
+                            <p class="card-text fst-italic text-secondary lh-lg mb-3">
+                                Des fleurs magnifiques pour notre mariage ! L'équipe a su créer exactement l'ambiance romantique que nous souhaitions. Le bouquet de la mariée était à couper le souffle.
+                            </p>
+                            <p class="fw-bold testimonial-author mb-0 mt-auto">— Marie & Jean</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card testimonial-card border-0 rounded-4 shadow-sm h-100 p-4 position-relative">
+                        <div class="card-body d-flex flex-column align-items-center text-center p-0">
+                            <img src="images/Clients2.jpg" alt="Sophie & Thomas" class="testimonial-photo rounded-circle border border-4 mb-3 shadow-sm">
+                            <div class="text-warning mb-3 fs-5">★★★★★</div>
+                            <p class="card-text fst-italic text-secondary lh-lg mb-3">
+                                Service exceptionnel du début à la fin. Les conseils étaient précieux et le résultat a dépassé nos attentes. Nos invités n'ont pas arrêté de complimenter les arrangements floraux.
+                            </p>
+                            <p class="fw-bold testimonial-author mb-0 mt-auto">— Sophie & Thomas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card testimonial-card border-0 rounded-4 shadow-sm h-100 p-4 position-relative">
+                        <div class="card-body d-flex flex-column align-items-center text-center p-0">
+                            <img src="images/Clients3.jpg" alt="Isabelle & Marc" class="testimonial-photo rounded-circle border border-4 mb-3 shadow-sm">
+                            <div class="text-warning mb-3 fs-5">★★★★★</div>
+                            <p class="card-text fst-italic text-secondary lh-lg mb-3">
+                                Professionnalisme, créativité et écoute. Le forfait Prestige a transformé notre salle en un véritable jardin enchanté. Un immense merci pour ce jour inoubliable !
+                            </p>
+                            <p class="fw-bold testimonial-author mb-0 mt-auto">— Isabelle & Marc</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SÉPARATEUR DÉCORATIF ========== -->
+    <div class="container my-5">
+        <hr class="border-0 sep-line opacity-100 mx-auto">
+    </div>
+
+    
 
     <!-- ========== FOOTER ========== -->
-    <footer class="border-top pt-5 pb-4 mt-auto">
+    <footer class="border-top pt-5 pb-4 mt-auto bg-white">
         <div class="container">
             <div class="row g-4">
                 
                 <!-- Colonne 1 : Logo et contact -->
                 <div class="col-lg-4 col-md-6">
-                    <i class="bi bi-flower1 d-block mb-3"></i>
+                    <i class="bi bi-flower1 d-block mb-3 fs-2"></i>
                     <h5 class="fw-bold mb-3">Nous contacter</h5>
-                    <address class="text-gris mb-1">
-                        <strong>Adresse</strong><br>
+                    <address class="text-secondary mb-1">
+                        <strong class="text-dark">Adresse</strong><br>
                         7070 avenue Henri-Julien<br>
                         Marché Jean-Talon<br>
                         Montréal, QC H2S 3S3
@@ -160,10 +219,10 @@
                 <div class="col-lg-4 col-md-6">
                     <h5 class="fw-bold mb-3">Mariages</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="bouquets.html" class="footer-link text-decoration-none text-gris">Anniversaires</a></li>
-                        <li class="mb-2"><a href="bouquets.html" class="footer-link text-decoration-none text-gris">Condoléances</a></li>
-                        <li class="mb-2"><a href="bouquets.html" class="footer-link text-decoration-none text-gris">Célébrations</a></li>
-                        <li class="mb-2"><a href="contact.html" class="footer-link text-decoration-none text-gris">Faire une demande</a></li>
+                        <li class="mb-2"><a href="bouquets.html" class="text-decoration-none text-secondary footer-link">Anniversaires</a></li>
+                        <li class="mb-2"><a href="bouquets.html" class="text-decoration-none text-secondary footer-link">Condoléances</a></li>
+                        <li class="mb-2"><a href="bouquets.html" class="text-decoration-none text-secondary footer-link">Célébrations</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary footer-link">Faire une demande</a></li>
                     </ul>
                 </div>
                 
@@ -171,19 +230,19 @@
                 <div class="col-lg-4 col-md-12">
                     <h5 class="fw-bold mb-3">Rejoignez-nous sur nos médias</h5>
                     <div class="d-flex gap-3 mb-4">
-                        <a href="#" class="social-icon" aria-label="YouTube">
+                        <a href="#" class="social-icon text-decoration-none fs-4" aria-label="YouTube">
                             <i class="bi bi-youtube"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
+                        <a href="#" class="social-icon text-decoration-none fs-4" aria-label="Instagram">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="Facebook">
+                        <a href="#" class="social-icon text-decoration-none fs-4" aria-label="Facebook">
                             <i class="bi bi-facebook"></i>
                         </a>
                     </div>
                     
-                    <img src="images/logo Binette et filles.png" alt="Binette et Filles" class="footer-logo">
-                    <p class="text-gris fst-italic small mt-2">Marchande de fleur</p>
+                    <img src="images/logo Binette et filles.png" alt="Binette et Filles" class="footer-logo img-fluid" style="max-width: 150px;">
+                    <p class="text-secondary fst-italic small mt-2 mb-0">Marchande de fleur</p>
                 </div>
                 
             </div>
@@ -191,7 +250,7 @@
             <!-- Mention légale -->
             <div class="row mt-4 pt-3 border-top">
                 <div class="col text-center">
-                    <p class="text-gris small mb-0">&copy; 2024 Binette et Filles. Tous droits réservés.</p>
+                    <p class="text-secondary small mb-0">&copy; 2024 Binette et Filles. Tous droits réservés.</p>
                 </div>
             </div>
         </div>

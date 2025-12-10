@@ -880,102 +880,58 @@ footer .border-top {
 }
 
 /* ==========================================================================
-   PAGE MARIAGES - VERSION FINALE
+   PAGE MARIAGES - VERSION OPTIMISÉE BOOTSTRAP
    ========================================================================== */
 
-/* Fil d'Ariane Mariages */
-.breadcrumb-mariage {
-    background-color: white;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--gris-clair);
-}
+/* --------------------------------------------------------------------------
+   FIL D'ARIANE
+   -------------------------------------------------------------------------- */
 
-.breadcrumb-mariage .breadcrumb {
-    background: none;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.breadcrumb-mariage .breadcrumb-item {
-    font-size: 0.95rem;
-}
-
-.breadcrumb-mariage .breadcrumb-item + .breadcrumb-item::before {
-    content: ">";
-    color: var(--gris);
-    padding: 0 10px;
-}
-
-.breadcrumb-mariage .breadcrumb-item a {
+.breadcrumb-link {
     color: var(--vert-sauge);
-    text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.breadcrumb-mariage .breadcrumb-item a:hover {
+.breadcrumb-link:hover {
     color: var(--rose-pale);
 }
 
-.breadcrumb-mariage .breadcrumb-item.active {
-    color: var(--gris);
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
 }
 
 /* --------------------------------------------------------------------------
-   HERO MARIAGES - AVEC ANIMATION MOT PAR MOT
+   HERO MARIAGES
    -------------------------------------------------------------------------- */
 
 .hero-mariages {
-    position: relative;
     height: 600px;
-    overflow: hidden;
-}
-
-.hero-mariage-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    filter: brightness(1.1);
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
     z-index: 1;
 }
 
-.hero-mariage-content {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
-    width: 90%;
-    max-width: 900px;
+.hero-mariage-img {
+    filter: brightness(1.1);
+    z-index: 0;
 }
 
-/* Animation titre mot par mot - Haut vers bas */
+.hero-mariage-content {
+    z-index: 2;
+    max-width: 900px;
+    left: 60% !important;
+}
+
 .hero-mariage-title {
     font-size: 4.5rem;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    color: white;
-    margin-bottom: 30px;
     text-shadow: 0 4px 20px rgba(0,0,0,0.9);
     font-weight: 400;
     letter-spacing: 4px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
 }
 
 .hero-mariage-title .word {
@@ -985,20 +941,10 @@ footer .border-top {
     animation: slideDownHero 0.8s ease-out forwards;
 }
 
-/* Délai pour chaque mot */
-.hero-mariage-title .word-1 {
-    animation-delay: 0.3s;
-}
+.hero-mariage-title .word-1 { animation-delay: 0.3s; }
+.hero-mariage-title .word-2 { animation-delay: 0.6s; }
+.hero-mariage-title .word-3 { animation-delay: 0.9s; }
 
-.hero-mariage-title .word-2 {
-    animation-delay: 0.6s;
-}
-
-.hero-mariage-title .word-3 {
-    animation-delay: 0.9s;
-}
-
-/* Animation de descente pour le hero */
 @keyframes slideDownHero {
     from {
         opacity: 0;
@@ -1010,17 +956,12 @@ footer .border-top {
     }
 }
 
-/* Bouton Hero - Vert Sauge avec animation */
-.hero-mariage-content .btn {
+.btn-hero {
     background-color: var(--vert-sauge);
     color: white;
     border: 2px solid var(--vert-sauge);
     font-weight: 600;
-    padding: 15px 45px;
-    border-radius: 50px;
-    font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(122, 154, 101, 0.4);
     opacity: 0;
     animation: fadeInButton 0.6s ease-out 1.2s forwards;
     margin-left: -100px;
@@ -1037,33 +978,36 @@ footer .border-top {
     }
 }
 
-.hero-mariage-content .btn:hover {
+.btn-hero:hover {
     background-color: var(--terre-cuite);
-    color: white;
     border-color: var(--terre-cuite);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(192, 138, 117, 0.5);
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .hero-mariages { height: 450px; }
+    .hero-mariage-content { left: 50% !important; }
+    .hero-mariage-title { font-size: 3rem; letter-spacing: 3px; }
+    .btn-hero { margin-left: 0; }
+}
+
+@media (max-width: 500px) {
+    .hero-mariages { height: 400px; }
+    .hero-mariage-title { font-size: 2.2rem; letter-spacing: 2px; }
 }
 
 /* --------------------------------------------------------------------------
-   GALERIE MARIAGES ÉLÉGANTS
+   TITRES DE SECTIONS
    -------------------------------------------------------------------------- */
 
-.galerie-mariages {
-    background-color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.galerie-mariages h2 {
+.section-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.5rem;
     color: var(--noir-doux);
-    position: relative;
-    padding-bottom: 20px;
 }
 
-.galerie-mariages h2::after {
+.section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1074,7 +1018,10 @@ footer .border-top {
     background-color: var(--rose-pale);
 }
 
-/* Grille Masonry */
+/* --------------------------------------------------------------------------
+   GALERIE MASONRY
+   -------------------------------------------------------------------------- */
+
 .masonry-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1084,22 +1031,16 @@ footer .border-top {
 }
 
 .masonry-item {
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
     cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Effet WOW au hover */
 .masonry-item:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(255, 192, 203, 0.5);
+    box-shadow: 0 15px 40px rgba(255, 192, 203, 0.5) !important;
     z-index: 10;
 }
 
-/* Overlay coloré au hover */
 .masonry-item::before {
     content: '';
     position: absolute;
@@ -1117,88 +1058,130 @@ footer .border-top {
     opacity: 1;
 }
 
-.masonry-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.masonry-item img {
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    z-index: 0;
 }
 
-.masonry-item:hover .masonry-img {
+.masonry-item:hover img {
     transform: scale(1.15);
 }
 
-/* Disposition EXACTE selon maquette */
-.masonry-grid .masonry-item:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1 / span 3;
+/* Disposition masonry */
+.masonry-grid .masonry-item:nth-child(1) { grid-column: 1; grid-row: 1 / span 3; }
+.masonry-grid .masonry-item:nth-child(2) { grid-column: 2; grid-row: 1 / span 2; }
+.masonry-grid .masonry-item:nth-child(3) { grid-column: 3; grid-row: 1 / span 1; }
+.masonry-grid .masonry-item:nth-child(4) { grid-column: 1; grid-row: 4 / span 1; }
+.masonry-grid .masonry-item:nth-child(5) { grid-column: 2; grid-row: 3 / span 2; }
+.masonry-grid .masonry-item:nth-child(6) { grid-column: 3; grid-row: 2 / span 3; }
+
+@media (max-width: 991px) {
+    .masonry-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+        gap: 20px;
+    }
+    
+    .masonry-grid .masonry-item:nth-child(1),
+    .masonry-grid .masonry-item:nth-child(2),
+    .masonry-grid .masonry-item:nth-child(3),
+    .masonry-grid .masonry-item:nth-child(4),
+    .masonry-grid .masonry-item:nth-child(5),
+    .masonry-grid .masonry-item:nth-child(6) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    
+    .masonry-grid .masonry-item:nth-child(odd) { grid-row: span 2; }
+    .masonry-grid .masonry-item:nth-child(even) { grid-row: span 1; }
 }
 
-.masonry-grid .masonry-item:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1 / span 2;
+@media (max-width: 768px) {
+    .masonry-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+        gap: 15px;
+    }
+    
+    .masonry-grid .masonry-item {
+        grid-row: span 1 !important;
+        height: 250px;
+    }
 }
-
-.masonry-grid .masonry-item:nth-child(3) {
-    grid-column: 3;
-    grid-row: 1 / span 1;
-}
-
-.masonry-grid .masonry-item:nth-child(4) {
-    grid-column: 1;
-    grid-row: 4 / span 1;
-}
-
-.masonry-grid .masonry-item:nth-child(5) {
-    grid-column: 2;
-    grid-row: 3 / span 2;
-}
-
-.masonry-grid .masonry-item:nth-child(6) {
-    grid-column: 3;
-    grid-row: 2 / span 3;
-}
-
 
 /* --------------------------------------------------------------------------
-   SÉPARATEURS DÉCORATIFS - JUSTE 2 TRAITS
+   SÉPARATEURS
    -------------------------------------------------------------------------- */
 
-.decorative-separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    margin: 60px 0;
-}
-
-.sep-flower {
-    display: none;
-}
-
 .sep-line {
-    width: 200px;
     height: 2px;
+    width: 200px;
     background: linear-gradient(to right, transparent, var(--rose-pale), var(--rose-pale), transparent);
+}
+
+@media (max-width: 768px) {
+    .sep-line { width: 150px; }
 }
 
 /* --------------------------------------------------------------------------
    TEXTE INTRODUCTIF
    -------------------------------------------------------------------------- */
 
-.intro-text {
-    border-left: 4px solid var(--rose-pale);
-    border-right: 4px solid var(--rose-pale);
-    padding: 40px 60px;
-    max-width: 900px;
+.intro-text-box {
+    border-color: var(--rose-pale) !important;
 }
 
-.intro-text .lead {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--gris);
+.text-justify {
     text-align: justify;
 }
+
+/* --------------------------------------------------------------------------
+   TÉMOIGNAGES
+   -------------------------------------------------------------------------- */
+
+.bg-testimonials {
+    background-color: var(--rose-tres-pale);
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 4rem;
+    color: var(--rose-pale);
+    opacity: 0.3;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(255, 192, 203, 0.3) !important;
+}
+
+.testimonial-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-color: var(--rose-pale) !important;
+}
+
+.testimonial-author {
+    color: var(--vert-sauge);
+}
+
+@media (max-width: 768px) {
+    .testimonial-card::before {
+        font-size: 3rem;
+        top: 10px;
+        left: 15px;
+    }
+    
+    .testimonial-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
