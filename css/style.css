@@ -879,9 +879,9 @@ footer .border-top {
     font-size: 1.1rem;
 }
 
-/* --------------------------------------------------------------------------
-   PAGE MARIAGES
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   PAGE MARIAGES - VERSION FINALE
+   ========================================================================== */
 
 /* Fil d'Ariane Mariages */
 .breadcrumb-mariage {
@@ -954,7 +954,7 @@ footer .border-top {
 .hero-mariage-content {
     position: absolute;
     top: 50%;
-    left: 68%; /* ← CHANGÉ : de 50% à 60% pour décaler à droite */
+    left: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
@@ -1023,7 +1023,7 @@ footer .border-top {
     box-shadow: 0 4px 15px rgba(122, 154, 101, 0.4);
     opacity: 0;
     animation: fadeInButton 0.6s ease-out 1.2s forwards;
-     margin-left: -150px;
+    margin-left: -100px;
 }
 
 @keyframes fadeInButton {
@@ -1045,43 +1045,8 @@ footer .border-top {
     box-shadow: 0 8px 25px rgba(192, 138, 117, 0.5);
 }
 
-/* Responsive Hero */
-@media (max-width: 768px) {
-    .hero-mariages {
-        height: 450px;
-    }
-    
-    .hero-mariage-title {
-        font-size: 3rem;
-        letter-spacing: 3px;
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .hero-mariage-content .btn {
-        padding: 12px 35px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .hero-mariages {
-        height: 400px;
-    }
-    
-    .hero-mariage-title {
-        font-size: 2.2rem;
-        letter-spacing: 2px;
-    }
-    
-    .hero-mariage-content .btn {
-        padding: 10px 30px;
-        font-size: 0.95rem;
-    }
-}
-
 /* --------------------------------------------------------------------------
-   GALERIE MARIAGES ÉLÉGANTS - SANS ANIMATIONS D'APPARITION
+   GALERIE MARIAGES ÉLÉGANTS
    -------------------------------------------------------------------------- */
 
 .galerie-mariages {
@@ -1090,7 +1055,6 @@ footer .border-top {
     overflow: hidden;
 }
 
-/* Titre simple sans animation */
 .galerie-mariages h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.5rem;
@@ -1119,7 +1083,6 @@ footer .border-top {
     margin-top: 40px;
 }
 
-/* Images SANS animations d'apparition - Juste hover */
 .masonry-item {
     overflow: hidden;
     border-radius: 12px;
@@ -1129,7 +1092,7 @@ footer .border-top {
     cursor: pointer;
 }
 
-/* Effet  hover */
+/* Effet WOW au hover */
 .masonry-item:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 15px 40px rgba(255, 192, 203, 0.5);
@@ -1168,7 +1131,7 @@ footer .border-top {
     transform: scale(1.15);
 }
 
-/* Disposition  */
+/* Disposition EXACTE selon maquette */
 .masonry-grid .masonry-item:nth-child(1) {
     grid-column: 1;
     grid-row: 1 / span 3;
@@ -1199,3 +1162,43 @@ footer .border-top {
     grid-row: 2 / span 3;
 }
 
+
+/* --------------------------------------------------------------------------
+   SÉPARATEURS DÉCORATIFS - JUSTE 2 TRAITS
+   -------------------------------------------------------------------------- */
+
+.decorative-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 60px 0;
+}
+
+.sep-flower {
+    display: none;
+}
+
+.sep-line {
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--rose-pale), var(--rose-pale), transparent);
+}
+
+/* --------------------------------------------------------------------------
+   TEXTE INTRODUCTIF
+   -------------------------------------------------------------------------- */
+
+.intro-text {
+    border-left: 4px solid var(--rose-pale);
+    border-right: 4px solid var(--rose-pale);
+    padding: 40px 60px;
+    max-width: 900px;
+}
+
+.intro-text .lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--gris);
+    text-align: justify;
+}
