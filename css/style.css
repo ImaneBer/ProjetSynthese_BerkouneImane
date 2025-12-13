@@ -1288,24 +1288,24 @@ footer .border-top {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   HERO CONTACT
+   HERO CONTACT - Fond foncé avec fleurs visibles
    -------------------------------------------------------------------------- */
 
 .hero-contact-pattern {
-    background: linear-gradient(135deg, #E5D4D4 0%, #F0E6E6 50%, #E5D4D4 100%); /* Rose-beige foncé */
+    background: linear-gradient(135deg, #E5D4D4 0%, #F0E6E6 50%, #E5D4D4 100%);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
 }
 
-/* Fleurs décoratives  */
+/* Fleurs décoratives VISIBLES */
 .hero-contact-pattern::before {
     content: '🌸';
     position: absolute;
     top: 30px;
     right: 8%;
     font-size: 10rem;
-    opacity: 0.25; 
+    opacity: 0.25;
     animation: float 4s ease-in-out infinite;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
 }
@@ -1322,13 +1322,6 @@ footer .border-top {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-/* Fleur supplémentaire */
-.hero-contact-pattern {
-    background-image: 
-        radial-gradient(circle at 15% 20%, rgba(255, 192, 203, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 85% 75%, rgba(122, 154, 101, 0.2) 0%, transparent 50%);
-}
-
 @keyframes float {
     0%, 100% { 
         transform: translateY(0) rotate(0deg); 
@@ -1340,7 +1333,7 @@ footer .border-top {
 
 .hero-contact-box {
     max-width: 700px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 .hero-icon {
@@ -1378,7 +1371,7 @@ footer .border-top {
     transform: translateX(5px);
 }
 
-/* Responsive */
+/* Responsive Hero */
 @media (max-width: 768px) {
     .hero-icon {
         font-size: 3.5rem;
@@ -1401,4 +1394,60 @@ footer .border-top {
     }
 }
 
+/* --------------------------------------------------------------------------
+   FORMULAIRE DE CONTACT
+   -------------------------------------------------------------------------- */
+
+.contact-form-section {
+    background-color: white;
+}
+
+/* Labels */
+.contact-form .form-label {
+    color: var(--noir-doux);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs et Select */
+.contact-form .form-control,
+.contact-form .form-select {
+    border: 2px solid var(--gris-clair);
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--vert-sauge);
+    box-shadow: 0 0 0 0.25rem rgba(122, 154, 101, 0.15);
+    background-color: white;
+}
+
+/* Placeholder */
+.contact-form .form-control::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Textarea */
+.contact-form textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form .form-control,
+    .contact-form .form-select {
+        font-size: 0.95rem;
+    }
+    
+    .contact-form .btn-vert-sauge {
+        width: 100%;
+    }
+}
 

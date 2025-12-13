@@ -52,35 +52,197 @@
         </nav>
     </header>
 
- <!-- ========== HERO CONTACT ========== -->
-<section class="hero-contact-pattern py-5">
-    <div class="container">
-        <div class="hero-contact-box text-center p-5 rounded-4 mx-auto bg-white shadow-lg">
-            <!-- Icône téléphone -->
-            <i class="bi bi-telephone-fill hero-icon mb-4 d-block"></i>
-            
-            <!-- Titre -->
-            <h1 class="hero-title mb-4">Contactez-nous</h1>
-            
-        
-            <p class="text-secondary mb-4 fs-5 fst-italic">Nous répondons sous 24 heures</p>
-            
-            
-            <div class="mb-3">
-                <i class="bi bi-telephone-fill text-danger me-2 fs-5"></i>
-                <a href="tel:5142716789" class="contact-info-link text-decoration-none fw-bold fs-4">514 271 6789</a>
-            </div>
-            
-          
-            <div>
-                <a href="mailto:info@binettefleurs.com" class="contact-info-link text-decoration-none fs-5">info@binettefleurs.com</a>
+    <!-- ========== FIL D'ARIANE ========== -->
+    <nav aria-label="breadcrumb" class="bg-white border-bottom py-3">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none breadcrumb-link">Accueil</a></li>
+                <li class="breadcrumb-item active text-secondary" aria-current="page">Contact</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- ========== HERO CONTACT ========== -->
+    <section class="hero-contact-pattern py-5">
+        <div class="container">
+            <div class="hero-contact-box text-center p-5 rounded-4 mx-auto bg-white shadow-lg">
+                <!-- Icône téléphone -->
+                <i class="bi bi-telephone-fill hero-icon mb-4 d-block"></i>
+                
+                <!-- Titre -->
+                <h1 class="hero-title mb-4">Contactez-nous</h1>
+                
+                <!-- Sous-titre -->
+                <p class="text-secondary mb-4 fs-5 fst-italic">Nous répondons sous 24 heures</p>
+                
+                <!-- Téléphone -->
+                <div class="mb-3">
+                    <i class="bi bi-telephone-fill text-danger me-2 fs-5"></i>
+                    <a href="tel:5142716789" class="contact-info-link text-decoration-none fw-bold fs-4">514 271 6789</a>
+                </div>
+                
+                <!-- Email -->
+                <div>
+                    <a href="mailto:info@binettefleurs.com" class="contact-info-link text-decoration-none fs-5">info@binettefleurs.com</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    
-    
+    <!-- ========== FORMULAIRE DE CONTACT ========== -->
+    <section class="contact-form-section py-5 bg-white">
+        <div class="container">
+            <!-- Titre de la section -->
+            <h2 class="text-center mb-5 section-title position-relative pb-4">Envoyez-nous un message</h2>
+            
+            <!-- Formulaire -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <form id="contactForm" class="contact-form">
+                        
+                        <!-- Nom complet -->
+                        <div class="mb-4">
+                            <label for="nom" class="form-label fw-semibold">Nom complet</label>
+                            <input 
+                                type="text" 
+                                class="form-control form-control-lg" 
+                                id="nom" 
+                                name="nom" 
+                                required
+                                placeholder="Votre nom complet"
+                            >
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label for="email" class="form-label fw-semibold">Email</label>
+                            <input 
+                                type="email" 
+                                class="form-control form-control-lg" 
+                                id="email" 
+                                name="email" 
+                                required
+                                placeholder="votre@email.com"
+                            >
+                        </div>
+                        
+                        <!-- Téléphone -->
+                        <div class="mb-4">
+                            <label for="telephone" class="form-label fw-semibold">Téléphone</label>
+                            <input 
+                                type="tel" 
+                                class="form-control form-control-lg" 
+                                id="telephone" 
+                                name="telephone" 
+                                required
+                                placeholder="514-XXX-XXXX"
+                            >
+                        </div>
+                        
+                        <!-- Sujet -->
+                        <div class="mb-4">
+                            <label for="sujet" class="form-label fw-semibold">Sujet</label>
+                            <select 
+                                class="form-select form-select-lg" 
+                                id="sujet" 
+                                name="sujet" 
+                                required
+                            >
+                                <option value="" selected disabled>Choisissez un sujet</option>
+                                <option value="mariage">Mariage</option>
+                                <option value="anniversaire">Anniversaire</option>
+                                <option value="evenement">Événement</option>
+                                <option value="bouquet">Bouquet personnalisé</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Message -->
+                        <div class="mb-4">
+                            <label for="message" class="form-label fw-semibold">Message</label>
+                            <textarea 
+                                class="form-control form-control-lg" 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                required
+                                placeholder="Décrivez votre projet ou votre demande..."
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Bouton Envoyer -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-vert-sauge btn-lg px-5 py-3 rounded-pill">
+                                <i class="bi bi-send-fill me-2"></i>Envoyer le message
+                            </button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- ========== FOOTER ========== -->
+    <footer class="border-top pt-5 pb-4 mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                
+                <!-- Colonne 1 : Logo et contact -->
+                <div class="col-lg-4 col-md-6">
+                    <i class="bi bi-flower1 d-block mb-3 fs-2"></i>
+                    <h5 class="fw-bold mb-3">Nous contacter</h5>
+                    <address class="text-secondary mb-1">
+                        <strong class="text-dark">Adresse</strong><br>
+                        7070 avenue Henri-Julien<br>
+                        Marché Jean-Talon<br>
+                        Montréal, QC H2S 3S3
+                    </address>
+                </div>
+                
+                <!-- Colonne 2 : Liens rapides -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3">Mariages</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="bouquets.html" class="text-decoration-none text-secondary footer-link">Anniversaires</a></li>
+                        <li class="mb-2"><a href="bouquets.html" class="text-decoration-none text-secondary footer-link">Condoléances</a></li>
+                        <li class="mb-2"><a href="bouquets.html" class="text-decoration-none text-secondary footer-link">Célébrations</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary footer-link">Faire une demande</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 3 : Réseaux sociaux -->
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="fw-bold mb-3">Rejoignez-nous sur nos médias</h5>
+                    <div class="d-flex gap-3 mb-4">
+                        <a href="#" class="social-icon text-decoration-none" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon text-decoration-none" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon text-decoration-none" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                    
+                    <img src="images/logo Binette et filles.png" alt="Binette et Filles" class="footer-logo img-fluid" style="max-width: 150px;">
+                    <p class="text-secondary fst-italic small mt-2 mb-0">Marchande de fleur</p>
+                </div>
+                
+            </div>
+            
+            <!-- Mention légale -->
+            <div class="row mt-4 pt-3 border-top">
+                <div class="col text-center">
+                    <p class="text-secondary small mb-0">&copy; 2024 Binette et Filles. Tous droits réservés.</p>
+                    <p class="text-secondary fst-italic small mt-2 mb-0">Projet fictif à des fins pédagogiques</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
