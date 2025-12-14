@@ -26,10 +26,15 @@ body {
     color: var(--noir-doux);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
     color: var(--noir-doux);
 }
+   
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
 
 h2 {
     margin-bottom: 60px;
@@ -126,7 +131,7 @@ section {
     width: auto;
     height: auto;
     object-fit: cover;
-    filter: brightness(1.05);
+    filter: brightness(0.7);
 }
 
 .hero-overlay {
@@ -135,7 +140,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 100%);
 }
 
 .hero-content {
@@ -154,14 +159,13 @@ section {
     color: white;
     margin-bottom: 30px;
     display: block;
-    text-shadow: 0 5px 25px rgba(0,0,0,1);
 }
 
 .hero-title {
     color: white;
     font-size: 3.5rem;
     margin-bottom: 25px;
-    text-shadow: 0 5px 35px rgba(0,0,0,1);
+    font-weight: 700;
     line-height: 1.3;
 }
 
@@ -169,9 +173,24 @@ section {
     color: white;
     font-size: 1.3rem;
     margin-bottom: 35px;
-    text-shadow: 0 4px 25px rgba(0,0,0,1);
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
 /* --------------------------------------------------------------------------
    NOS CRÉATIONS
    -------------------------------------------------------------------------- */
@@ -1451,3 +1470,132 @@ footer .border-top {
     }
 }
 
+/* --------------------------------------------------------------------------
+   SECTION INFORMATIONS - 3 CARTES
+   -------------------------------------------------------------------------- */
+
+.info-section {
+    background: linear-gradient(to bottom, white 0%, var(--rose-tres-pale) 100%);
+}
+
+/* Cartes avec fond dégradé */
+.info-card {
+    background: linear-gradient(135deg, #FFF9FB 0%, #FFFFFF 100%);
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de fond au hover */
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--rose-tres-pale) 0%, var(--creme) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.info-card:hover::before {
+    opacity: 1;
+}
+
+.info-card:hover {
+    border-color: var(--rose-pale);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 192, 203, 0.4) !important;
+}
+
+/* Contenu au-dessus du dégradé */
+.info-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Icônes avec couleurs différentes */
+.info-card:nth-child(1) .info-card-icon {
+    color: var(--vert-sauge);
+}
+
+.info-card:nth-child(2) .info-card-icon {
+    color: var(--terre-cuite);
+}
+
+.info-card:nth-child(3) .info-card-icon {
+    color: var(--rose-pale);
+}
+
+/* Animation icônes */
+.info-card-icon {
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-card-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Titres */
+.info-card h3 {
+    color: var(--noir-doux);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Liens principaux (Voir sur Maps, Voir FAQ) */
+.info-card-link {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.info-card-link:hover {
+    color: var(--vert-sauge) !important;
+    transform: translateX(5px);
+}
+
+/* Liens items de la FAQ */
+.info-card-link-item {
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    border-radius: 8px;
+}
+
+.info-card-link-item:hover {
+    color: var(--vert-sauge) !important;
+    background-color: rgba(122, 154, 101, 0.1);
+    padding-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .info-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        margin-bottom: 20px;
+    }
+    
+    .info-card-icon {
+        font-size: 3rem !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   CARTE GOOGLE MAPS
+   -------------------------------------------------------------------------- */
+
+.map-section iframe {
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.map-section iframe:hover {
+    filter: grayscale(0%);
+}
