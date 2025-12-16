@@ -106,6 +106,10 @@ section {
     color: #5A7A45 !important;
 }
 
+/* ==========================================================================
+   PAGE ACCUEIL 
+   ========================================================================== */
+
 /* --------------------------------------------------------------------------
    HERO VIDÉO
    -------------------------------------------------------------------------- */
@@ -126,7 +130,7 @@ section {
     width: auto;
     height: auto;
     object-fit: cover;
-    filter: brightness(0.7);
+    filter: brightness(1.05);
 }
 
 .hero-overlay {
@@ -135,7 +139,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 .hero-content {
@@ -151,16 +155,17 @@ section {
 
 .hero-icon {
     font-size: 4rem;
-    color: white !important;
+    color: white;
     margin-bottom: 30px;
     display: block;
+    text-shadow: 0 5px 25px rgba(0,0,0,1);
 }
 
 .hero-title {
-    color: white !important;
+    color: white;
     font-size: 3.5rem;
     margin-bottom: 25px;
-    font-weight: 700;
+    text-shadow: 0 5px 35px rgba(0,0,0,1);
     line-height: 1.3;
 }
 
@@ -168,45 +173,7 @@ section {
     color: white;
     font-size: 1.3rem;
     margin-bottom: 35px;
-}
-
-/* Responsive Hero Vidéo */
-@media (max-width: 768px) {
-    .hero {
-        height: 80vh;
-        min-height: 500px;
-    }
-    
-    .hero-icon {
-        font-size: 3rem;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .hero {
-        height: 70vh;
-        min-height: 450px;
-    }
-    
-    .hero-icon {
-        font-size: 2.5rem;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
+    text-shadow: 0 4px 25px rgba(0,0,0,1);
 }
 
 /* --------------------------------------------------------------------------
@@ -272,31 +239,6 @@ section {
     color: var(--rose-pale);
 }
 
-/* Responsive Nos Créations */
-@media (max-width: 768px) {
-    .creation-card {
-        height: 250px;
-    }
-    
-    .creation-content h3 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .creation-card {
-        height: 220px;
-    }
-    
-    .creation-content {
-        padding: 20px;
-    }
-    
-    .creation-content h3 {
-        font-size: 1.3rem;
-    }
-}
-
 /* --------------------------------------------------------------------------
    PROMOTIONS - CARROUSEL
    -------------------------------------------------------------------------- */
@@ -337,13 +279,11 @@ section {
     margin-bottom: 20px;
 }
 
-/* Bouton  */
 .promo-content .btn {
     padding: 10px 28px;
     font-size: 0.9rem;
 }
 
-/* Indicateurs personnalisés */
 .carousel-indicators [data-bs-target] {
     width: 12px;
     height: 12px;
@@ -366,44 +306,6 @@ section {
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
     background-color: var(--rose-pale);
-}
-
-/* Responsive Promotions */
-@media (max-width: 768px) {
-    .promo-img {
-        height: 300px;
-    }
-    
-    .promo-content {
-        padding: 30px;
-    }
-    
-    .promo-title {
-        font-size: 1.7rem;
-    }
-    
-    .promo-text {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .promo-img {
-        height: 250px;
-        margin-bottom: 20px;
-    }
-    
-    .promo-content {
-        padding: 25px 20px;
-    }
-    
-    .promo-title {
-        font-size: 1.5rem;
-    }
-    
-    .promo-text {
-        font-size: 0.95rem;
-    }
 }
 
 /* --------------------------------------------------------------------------
@@ -456,43 +358,6 @@ section {
     line-height: 1.6;
 }
 
-/* Responsive Valeurs */
-@media (max-width: 768px) {
-    .valeur-card {
-        padding: 30px 15px;
-    }
-    
-    .valeur-icon {
-        width: 80px;
-        height: 80px;
-        font-size: 2rem;
-    }
-    
-    .valeur-card h3 {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .valeur-card {
-        padding: 25px 10px;
-    }
-    
-    .valeur-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 1.8rem;
-    }
-    
-    .valeur-card h3 {
-        font-size: 1.2rem;
-    }
-    
-    .valeur-card p {
-        font-size: 0.95rem;
-    }
-}
-
 /* --------------------------------------------------------------------------
    BOUTONS PERSONNALISÉS
    -------------------------------------------------------------------------- */
@@ -534,22 +399,32 @@ section {
     transform: translateY(-2px);
 }
 
-/* Responsive Boutons */
-@media (max-width: 768px) {
-    .btn-vert-sauge,
-    .btn-outline-vert-sauge {
-        padding: 12px 28px;
-        font-size: 0.9rem;
-    }
+.btn {
+    position: relative;
+    overflow: hidden;
 }
 
-@media (max-width: 500px) {
-    .btn-vert-sauge,
-    .btn-outline-vert-sauge {
-        padding: 10px 24px;
-        font-size: 0.85rem;
-        width: 100%;
-    }
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -615,13 +490,12 @@ footer .text-gris {
 footer .border-top {
     border-color: var(--rose-pale) !important;
     border-width: 1px !important;
-} 
+}
 
-/* --------------------------------------------------------------------------
+/* ==========================================================================
    PAGE NOS BOUQUETS
-   -------------------------------------------------------------------------- */
+   ========================================================================== */
 
-/* Hero Bouquets */
 .hero-bouquets {
     background: linear-gradient(135deg, var(--rose-tres-pale) 0%, var(--rose-pale) 100%);
     padding: 80px 0;
@@ -661,45 +535,10 @@ footer .border-top {
     font-weight: 500;
 }
 
-/* Responsive Hero Bouquets */
-@media (max-width: 768px) {
-    .hero-bouquets {
-        padding: 60px 0;
-    }
-    
-    .hero-icon-bouquets {
-        font-size: 3rem;
-    }
-    
-    .hero-title-bouquets {
-        font-size: 2.2rem;
-    }
-    
-    .hero-subtitle-bouquets {
-        font-size: 1.1rem;
-    }
-}
+/* --------------------------------------------------------------------------
+   CARTES BOUQUETS
+   -------------------------------------------------------------------------- */
 
-@media (max-width: 500px) {
-    .hero-bouquets {
-        padding: 40px 0;
-    }
-    
-    .hero-icon-bouquets {
-        font-size: 2.5rem;
-    }
-    
-    .hero-title-bouquets {
-        font-size: 1.8rem;
-        letter-spacing: 1px;
-    }
-    
-    .hero-subtitle-bouquets {
-        font-size: 1rem;
-    }
-}
-
-/* Cartes Bouquets */
 .bouquet-card {
     position: relative;
     background-color: white;
@@ -750,42 +589,11 @@ footer .border-top {
     color: var(--vert-sauge);
     margin-bottom: 15px;
 }
+  
+/* --------------------------------------------------------------------------
+   SECTION PROMOTION
+   -------------------------------------------------------------------------- */
 
-/* Responsive Cartes Bouquets */
-@media (max-width: 768px) {
-    .bouquet-img {
-        height: 300px;
-    }
-    
-    .bouquet-info h3 {
-        font-size: 1.3rem;
-    }
-    
-    .bouquet-price {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .bouquet-img {
-        height: 250px;
-        padding: 10px;
-    }
-    
-    .bouquet-info {
-        padding: 20px;
-    }
-    
-    .bouquet-info h3 {
-        font-size: 1.2rem;
-    }
-    
-    .bouquet-price {
-        font-size: 1.1rem;
-    }
-}
-
-/* Section Promotion */
 .promo-section {
     background-color: white;
     padding: 80px 0;
@@ -869,69 +677,9 @@ footer .border-top {
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(122, 154, 101, 0.4);
 }
-
-/* Responsive Banner Promo */
-@media (max-width: 768px) {
-    .promo-section {
-        padding: 60px 0;
-    }
-    
-    .promo-banner {
-        padding: 40px 30px;
-    }
-    
-    .promo-banner-title {
-        font-size: 2.2rem;
-    }
-    
-    .promo-banner-text {
-        font-size: 1.2rem;
-    }
-    
-    .promo-banner-text strong {
-        font-size: 1.4rem;
-    }
-    
-    .promo-icon {
-        font-size: 4rem;
-    }
-    
-    .promo-banner::before {
-        right: 20px;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .promo-banner {
-        padding: 30px 20px;
-    }
-    
-    .promo-banner-title {
-        font-size: 1.8rem;
-        letter-spacing: 1px;
-    }
-    
-    .promo-banner-text {
-        font-size: 1rem;
-    }
-    
-    .promo-banner-text strong {
-        font-size: 1.2rem;
-        display: block;
-        margin: 10px 0;
-    }
-    
-    .promo-icon {
-        font-size: 3rem;
-    }
-}
-
 /* --------------------------------------------------------------------------
    BADGES
    -------------------------------------------------------------------------- */
-
-/* Badge Populaire */
 .badge-popular {
     position: absolute;
     top: 15px;
@@ -960,7 +708,6 @@ footer .border-top {
     }
 }
 
-/* Badge Nouveau */
 .badge-new {
     position: absolute;
     top: 15px;
@@ -977,6 +724,7 @@ footer .border-top {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
 
 /* --------------------------------------------------------------------------
    SECTION CITATION
@@ -1032,47 +780,6 @@ footer .border-top {
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
-}
-
-/* Responsive Citation */
-@media (max-width: 768px) {
-    .citation-box {
-        padding: 40px 30px;
-    }
-    
-    .citation-icon {
-        font-size: 3rem;
-    }
-    
-    .citation-text {
-        font-size: 1.5rem;
-    }
-    
-    .decoration-line {
-        width: 80px;
-    }
-}
-
-@media (max-width: 500px) {
-    .citation-box {
-        padding: 30px 20px;
-    }
-    
-    .citation-icon {
-        font-size: 2.5rem;
-    }
-    
-    .citation-text {
-        font-size: 1.3rem;
-    }
-    
-    .decoration-flower {
-        font-size: 1.2rem;
-    }
-    
-    .decoration-line {
-        width: 60px;
-    }
 }
 
 /* --------------------------------------------------------------------------
@@ -1198,100 +905,12 @@ footer .border-top {
     margin: 0;
 }
 
-.btn-lg {
-    padding: 15px 40px;
-    font-size: 1.1rem;
-}
-
-/* Responsive Bouquet Vedette */
-@media (max-width: 991px) {
-    .vedette-img {
-        height: 400px;
-    }
-    
-    .vedette-title {
-        font-size: 2rem;
-    }
-    
-    .vedette-price {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .vedette-img {
-        height: 350px;
-    }
-    
-    .vedette-content {
-        padding: 25px;
-    }
-    
-    .vedette-icon {
-        font-size: 2.5rem;
-    }
-    
-    .vedette-title {
-        font-size: 1.8rem;
-    }
-    
-    .vedette-description {
-        font-size: 1rem;
-    }
-    
-    .feature-item {
-        font-size: 1rem;
-    }
-    
-    .vedette-price {
-        font-size: 1.8rem;
-    }
-    
-    .btn-lg {
-        padding: 12px 30px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .vedette-img {
-        height: 300px;
-    }
-    
-    .vedette-content {
-        padding: 20px;
-    }
-    
-    .vedette-icon {
-        font-size: 2rem;
-    }
-    
-    .vedette-title {
-        font-size: 1.6rem;
-    }
-    
-    .vedette-price {
-        font-size: 1.6rem;
-    }
-    
-    .vedette-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .btn-lg {
-        width: 100%;
-    }
-}
-
 /* ==========================================================================
-   PAGE MARIAGES 
+   PAGE MARIAGES
    ========================================================================== */
-
 /* --------------------------------------------------------------------------
    FIL D'ARIANE
    -------------------------------------------------------------------------- */
-
 .breadcrumb-link {
     color: var(--vert-sauge);
     font-weight: 500;
@@ -1305,18 +924,11 @@ footer .border-top {
 .breadcrumb-item + .breadcrumb-item::before {
     content: ">";
 }
-
 /* --------------------------------------------------------------------------
    HERO MARIAGES
    -------------------------------------------------------------------------- */
-
 .hero-mariages {
     height: 700px;
-}
-
-.hero-overlay {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
-    z-index: 1;
 }
 
 .hero-mariage-img {
@@ -1325,11 +937,14 @@ footer .border-top {
     object-fit: cover;
     object-position: left center; 
 }
-
+.hero-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
 .hero-mariage-content {
     z-index: 2;
     max-width: 900px;
-    left: 60% !important;
+    left: 68% !important;
 }
 
 .hero-mariage-title {
@@ -1390,45 +1005,9 @@ footer .border-top {
     border-color: var(--terre-cuite);
     transform: translateY(-3px);
 }
-
-/* Responsive Hero Mariages */
-@media (max-width: 768px) {
-    .hero-mariages { height: 450px; }
-    .hero-mariage-content { left: 50% !important; }
-    .hero-mariage-title { font-size: 3rem; letter-spacing: 3px; }
-    .btn-hero { margin-left: 0; }
-}
-
-@media (max-width: 500px) {
-    .hero-mariages { height: 400px; }
-    .hero-mariage-title { font-size: 2.2rem; letter-spacing: 2px; }
-}
-
-/* --------------------------------------------------------------------------
-   TITRES DE SECTIONS
-   -------------------------------------------------------------------------- */
-
-.section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    color: var(--noir-doux);
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: var(--rose-pale);
-}
-
 /* --------------------------------------------------------------------------
    GALERIE MASONRY
    -------------------------------------------------------------------------- */
-
 .masonry-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1473,66 +1052,26 @@ footer .border-top {
     transform: scale(1.15);
 }
 
-/* Disposition masonry */
 .masonry-grid .masonry-item:nth-child(1) { grid-column: 1; grid-row: 1 / span 3; }
 .masonry-grid .masonry-item:nth-child(2) { grid-column: 2; grid-row: 1 / span 2; }
 .masonry-grid .masonry-item:nth-child(3) { grid-column: 3; grid-row: 1 / span 1; }
 .masonry-grid .masonry-item:nth-child(4) { grid-column: 1; grid-row: 4 / span 1; }
 .masonry-grid .masonry-item:nth-child(5) { grid-column: 2; grid-row: 3 / span 2; }
-.masonry-grid .masonry-item:nth-child(6) { grid-column: 3; grid-row: 2 / span 3; }
-
-@media (max-width: 991px) {
-    .masonry-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 200px;
-        gap: 20px;
-    }
-    
-    .masonry-grid .masonry-item:nth-child(1),
-    .masonry-grid .masonry-item:nth-child(2),
-    .masonry-grid .masonry-item:nth-child(3),
-    .masonry-grid .masonry-item:nth-child(4),
-    .masonry-grid .masonry-item:nth-child(5),
-    .masonry-grid .masonry-item:nth-child(6) {
-        grid-column: auto;
-        grid-row: auto;
-    }
-    
-    .masonry-grid .masonry-item:nth-child(odd) { grid-row: span 2; }
-    .masonry-grid .masonry-item:nth-child(even) { grid-row: span 1; }
-}
-
-@media (max-width: 768px) {
-    .masonry-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 250px;
-        gap: 15px;
-    }
-    
-    .masonry-grid .masonry-item {
-        grid-row: span 1 !important;
-        height: 250px;
-    }
-}
+.masonry-grid .masonry-item:nth-child(6) { grid-column: 3; grid-row: 2 / span 3; } 
 
 /* --------------------------------------------------------------------------
    SÉPARATEURS
    -------------------------------------------------------------------------- */
-
 .sep-line {
     height: 2px;
     width: 200px;
     background: linear-gradient(to right, transparent, var(--rose-pale), var(--rose-pale), transparent);
-}
 
-@media (max-width: 768px) {
-    .sep-line { width: 150px; }
 }
 
 /* --------------------------------------------------------------------------
    TEXTE INTRODUCTIF
    -------------------------------------------------------------------------- */
-
 .intro-text-box {
     border-color: var(--rose-pale) !important;
 }
@@ -1544,7 +1083,6 @@ footer .border-top {
 /* --------------------------------------------------------------------------
    TÉMOIGNAGES
    -------------------------------------------------------------------------- */
-
 .bg-testimonials {
     background-color: var(--rose-tres-pale);
 }
@@ -1577,23 +1115,9 @@ footer .border-top {
     color: var(--vert-sauge);
 }
 
-@media (max-width: 768px) {
-    .testimonial-card::before {
-        font-size: 3rem;
-        top: 10px;
-        left: 15px;
-    }
-    
-    .testimonial-photo {
-        width: 100px;
-        height: 100px;
-    }
-}
-
 /* --------------------------------------------------------------------------
    FORFAITS
    -------------------------------------------------------------------------- */
-
 .bg-forfaits {
     background: linear-gradient(180deg, #FFFFFF 0%, var(--rose-tres-pale) 50%, #FFFFFF 100%);
 }
@@ -1627,57 +1151,18 @@ footer .border-top {
     color: var(--gris);
 }
 
-/* Tirets devant items */
 .forfait-header + div ul li::before {
     content: '-';
     position: absolute;
     left: 0;
 }
 
-/* Effet onde sur boutons */
-.btn {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
-}
-
-.btn:active::before {
-    width: 300px;
-    height: 300px;
-}
-
-@media (max-width: 991px) {
-    .forfait-header { width: 250px; height: 250px; }
-    .forfait-name { font-size: 1.9rem; }
-    .forfait-price { font-size: 1.6rem; }
-}
-
-@media (max-width: 768px) {
-    .forfait-header { width: 220px; height: 220px; }
-    .forfait-name { font-size: 1.7rem; }
-    .forfait-price { font-size: 1.4rem; }
-}
-
 /* ==========================================================================
    PAGE CONTACT
    ========================================================================== */
-
 /* --------------------------------------------------------------------------
-   HERO CONTACT 
-   -------------------------------------------------------------------------- */
-
+   HERO CONTACT
+   ------------------------------------------------------------------*/
 .hero-contact-pattern {
     background: linear-gradient(135deg, #E5D4D4 0%, #F0E6E6 50%, #E5D4D4 100%);
     padding: 80px 0;
@@ -1685,16 +1170,22 @@ footer .border-top {
     overflow: hidden;
 }
 
-
 .hero-contact-pattern .hero-title {
     color: var(--noir-doux) !important;
 }
 
 .hero-contact-pattern .hero-icon {
     color: var(--vert-sauge) !important;
+    animation: pulse 2s ease-in-out infinite;
 }
-
-/* Fleurs décoratives */
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.1); 
+    }
+}
 .hero-contact-pattern::before {
     content: '🌸';
     position: absolute;
@@ -1723,15 +1214,6 @@ footer .border-top {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes pulse {
-    0%, 100% { 
-        transform: scale(1); 
-    }
-    50% { 
-        transform: scale(1.1); 
-    }
-}
-
 .contact-info-link {
     color: var(--noir-doux);
     transition: all 0.3s ease;
@@ -1742,45 +1224,57 @@ footer .border-top {
     color: var(--vert-sauge);
     transform: translateX(5px);
 }
+/* --------------------------------------------------------------------------
+   ANIMATION TÉLÉPHONE VERT
+   -------------------------------------------------------------------------- */
+.phone-pulse {
+    animation: phone-ring 1.5s ease-in-out infinite;
+    transform-origin: center;
+    display: inline-block;
+}
 
-/* Responsive Hero Contact */
-@media (max-width: 768px) {
-    .hero-icon {
-        font-size: 3.5rem;
+@keyframes phone-ring {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
     }
-    
-    .hero-title {
-        font-size: 2.5rem;
+    10%, 30% {
+        transform: rotate(-15deg) scale(1.1);
     }
-    
-    .hero-contact-pattern::before {
-        font-size: 6rem;
-        right: 5%;
-        top: 20px;
+    20%, 40% {
+        transform: rotate(15deg) scale(1.1);
     }
-    
-    .hero-contact-pattern::after {
-        font-size: 5rem;
-        left: 5%;
-        bottom: 20px;
+    50% {
+        transform: rotate(0deg) scale(1);
     }
 }
 
+.phone-pulse:hover {
+    animation: phone-ring-fast 0.5s ease-in-out;
+}
+
+@keyframes phone-ring-fast {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+    75% {
+        transform: rotate(20deg) scale(1.2);
+    }
+}
 /* --------------------------------------------------------------------------
    FORMULAIRE DE CONTACT
    -------------------------------------------------------------------------- */
-
 .contact-form-section {
     background-color: white;
 }
-
 
 .contact-form .form-label {
     color: var(--noir-doux);
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
-
 
 .contact-form .form-control,
 .contact-form .form-select {
@@ -1799,39 +1293,23 @@ footer .border-top {
     background-color: white;
 }
 
-
 .contact-form .form-control::placeholder {
     color: #999;
     font-style: italic;
 }
 
-/* Textarea */
 .contact-form textarea.form-control {
     resize: vertical;
     min-height: 150px;
 }
 
-/* Responsive Formulaire */
-@media (max-width: 768px) {
-    .contact-form .form-control,
-    .contact-form .form-select {
-        font-size: 0.95rem;
-    }
-    
-    .contact-form .btn-vert-sauge {
-        width: 100%;
-    }
-}
-
 /* --------------------------------------------------------------------------
    SECTION INFORMATIONS - 3 CARTES
    -------------------------------------------------------------------------- */
-
 .info-section {
     background: linear-gradient(to bottom, white 0%, var(--rose-tres-pale) 100%);
 }
 
-/* Cartes */
 .info-card {
     background: linear-gradient(135deg, #FFF9FB 0%, #FFFFFF 100%);
     border: 2px solid transparent;
@@ -1840,7 +1318,6 @@ footer .border-top {
     overflow: hidden;
 }
 
-/* Effet de fond au hover */
 .info-card::before {
     content: '';
     position: absolute;
@@ -1864,13 +1341,11 @@ footer .border-top {
     box-shadow: 0 15px 40px rgba(255, 192, 203, 0.4) !important;
 }
 
-
 .info-card > * {
     position: relative;
     z-index: 1;
 }
 
-/* Icônes avec couleurs différentes */
 .info-card:nth-child(1) .info-card-icon {
     color: var(--vert-sauge);
 }
@@ -1883,7 +1358,6 @@ footer .border-top {
     color: var(--rose-pale);
 }
 
-/* Animation icônes */
 .info-card-icon {
     transition: all 0.3s ease;
 }
@@ -1892,13 +1366,11 @@ footer .border-top {
     transform: scale(1.15) rotate(5deg);
 }
 
-/* Titres */
 .info-card h3 {
     color: var(--noir-doux);
     font-family: 'Cormorant Garamond', serif;
 }
 
-/* Liens principaux (Voir sur Maps, Voir FAQ) */
 .info-card-link {
     font-weight: 600;
     transition: all 0.3s ease;
@@ -1910,7 +1382,6 @@ footer .border-top {
     transform: translateX(5px);
 }
 
-/* Liens items de la FAQ */
 .info-card-link-item {
     transition: all 0.3s ease;
     padding: 8px 0;
@@ -1923,14 +1394,292 @@ footer .border-top {
     padding-left: 10px;
 }
 
-/* Responsive Cartes Info */
+/* --------------------------------------------------------------------------
+   CARTE GOOGLE MAPS
+   -------------------------------------------------------------------------- */
+.map-section iframe {
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.map-section iframe:hover {
+    filter: grayscale(0%);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   991px (Tablette large)
+   -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
+    .masonry-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+        gap: 20px;
+    }
+    
+    .masonry-grid .masonry-item:nth-child(1),
+    .masonry-grid .masonry-item:nth-child(2),
+    .masonry-grid .masonry-item:nth-child(3),
+    .masonry-grid .masonry-item:nth-child(4),
+    .masonry-grid .masonry-item:nth-child(5),
+    .masonry-grid .masonry-item:nth-child(6) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    
+    .masonry-grid .masonry-item:nth-child(odd) { grid-row: span 2; }
+    .masonry-grid .masonry-item:nth-child(even) { grid-row: span 1; }
+    
+    .forfait-header { 
+        width: 250px; 
+        height: 250px; 
+    }
+    
+    .forfait-name { 
+        font-size: 1.9rem; 
+    }
+    
+    .forfait-price { 
+        font-size: 1.6rem; 
+    }
+    
     .info-card {
         min-height: auto;
     }
 }
 
+/* --------------------------------------------------------------------------
+   768px (Tablette)
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .hero {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .hero-icon {
+        font-size: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .creation-card {
+        height: 250px;
+    }
+    
+    .creation-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .promo-img {
+        height: 300px;
+    }
+    
+    .promo-title {
+        font-size: 1.7rem;
+    }
+    
+    .promo-text {
+        font-size: 1rem;
+    }
+    
+    .valeur-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .valeur-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .valeur-card p {
+        font-size: 0.95rem;
+    }
+    
+    .hero-bouquets {
+        padding: 60px 0;
+    }
+    
+    .hero-icon-bouquets {
+        font-size: 3rem;
+    }
+    
+    .hero-title-bouquets {
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .hero-subtitle-bouquets {
+        font-size: 1.1rem;
+    }
+    
+    .bouquet-img {
+        height: 300px;
+    }
+    
+    .bouquet-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .bouquet-price {
+        font-size: 1.2rem;
+    }
+    
+    .promo-banner {
+        padding: 40px 30px;
+    }
+    
+    .promo-banner-title {
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .promo-banner-text {
+        font-size: 1.2rem;
+    }
+    
+    .promo-banner-text strong {
+        font-size: 1.4rem;
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .promo-icon {
+        font-size: 4rem;
+    }
+    
+    .citation-box {
+        padding: 40px 30px;
+    }
+    
+    .citation-icon {
+        font-size: 3rem;
+    }
+    
+    .citation-text {
+        font-size: 1.5rem;
+    }
+    
+    .vedette-img {
+        height: 350px;
+    }
+    
+    .vedette-content {
+        padding: 20px;
+    }
+    
+    .vedette-icon {
+        font-size: 2.5rem;
+    }
+    
+    .vedette-title {
+        font-size: 1.8rem;
+    }
+    
+    .vedette-description {
+        font-size: 1rem;
+    }
+    
+    .vedette-price {
+        font-size: 2rem;
+    }
+    
+    .hero-mariages { 
+        height: 450px; 
+    }
+    
+    .hero-mariage-content { 
+        left: 50% !important; 
+    }
+    
+    .hero-mariage-title { 
+        font-size: 3rem; 
+        letter-spacing: 3px; 
+    }
+    
+    .btn-hero { 
+        margin-left: 0; 
+    }
+    
+    .masonry-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+        gap: 15px;
+    }
+    
+    .masonry-grid .masonry-item {
+        grid-row: span 1 !important;
+        height: 250px;
+    }
+    
+    .sep-line { 
+        width: 150px; 
+    }
+    
+    .testimonial-card::before {
+        font-size: 3rem;
+        top: 10px;
+        left: 15px;
+    }
+    
+    .testimonial-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .forfait-header { 
+        width: 220px; 
+        height: 220px; 
+    }
+    
+    .forfait-name { 
+        font-size: 1.7rem; 
+    }
+    
+    .forfait-price { 
+        font-size: 1.4rem; 
+    }
+    
+    .hero-contact-pattern::before {
+        font-size: 6rem;
+        right: 5%;
+        top: 20px;
+    }
+    
+    .hero-contact-pattern::after {
+        font-size: 5rem;
+        left: 5%;
+        bottom: 20px;
+    }
+    
+    .contact-form .form-control,
+    .contact-form .form-select {
+        font-size: 0.95rem;
+    }
+    
+    .contact-form .btn-vert-sauge {
+        width: 100%;
+    }
+    
     .info-card {
         margin-bottom: 20px;
     }
@@ -1941,14 +1690,159 @@ footer .border-top {
 }
 
 /* --------------------------------------------------------------------------
-   CARTE GOOGLE MAPS
+   500px (Mobile)
    -------------------------------------------------------------------------- */
-
-.map-section iframe {
-    filter: grayscale(20%);
-    transition: filter 0.3s ease;
+@media (max-width: 500px) {
+    section {
+        padding: 40px 0;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+    
+    .hero {
+        height: 70vh;
+        min-height: 450px;
+    }
+    
+    .hero-icon {
+        font-size: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .creation-card {
+        height: 220px;
+    }
+    
+    .creation-content {
+        padding: 20px;
+    }
+    
+    .creation-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .promo-img {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .promo-content {
+        padding: 25px 20px;
+    }
+    
+    .promo-title {
+        font-size: 1.5rem;
+    }
+    
+    .promo-text {
+        font-size: 0.95rem;
+    }
+    
+    .valeur-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .valeur-card {
+        padding: 30px 15px;
+    }
+    
+    .btn-vert-sauge,
+    .btn-outline-vert-sauge {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-bouquets {
+        padding: 50px 0;
+    }
+    
+    .hero-icon-bouquets {
+        font-size: 2.5rem;
+    }
+    
+    .hero-title-bouquets {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle-bouquets {
+        font-size: 1rem;
+    }
+    
+    .bouquet-img {
+        height: 250px;
+        padding: 10px;
+    }
+    
+    .bouquet-info {
+        padding: 20px;
+    }
+    
+    .promo-banner {
+        padding: 30px 20px;
+    }
+    
+    .promo-banner-title {
+        font-size: 1.8rem;
+    }
+    
+    .promo-banner-text {
+        font-size: 1.1rem;
+    }
+    
+    .promo-banner-text strong {
+        font-size: 1.3rem;
+    }
+    
+    .promo-icon {
+        font-size: 3rem;
+    }
+    
+    .citation-box {
+        padding: 30px 20px;
+    }
+    
+    .citation-icon {
+        font-size: 2.5rem;
+    }
+    
+    .citation-text {
+        font-size: 1.3rem;
+    }
+    
+    .vedette-img {
+        height: 300px;
+    }
+    
+    .vedette-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .btn-lg {
+        width: 100%;
+    }
+    
+    .hero-mariages { 
+        height: 400px; 
+    }
+    
+    .hero-mariage-title { 
+        font-size: 2.2rem; 
+        letter-spacing: 2px; 
+    }
 }
 
-.map-section iframe:hover {
-    filter: grayscale(0%);
-}
